@@ -2,7 +2,6 @@ package nc.module.task.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -14,8 +13,13 @@ public class MainController {
         return modelAndView;
     }
 
-    @GetMapping("/login")
-    public String loginPage() {
-        return "login";
+    @GetMapping("/users")
+    public String allUsers() {
+        return "users";
+    }
+
+    @GetMapping("/question")
+    public String getQuestion() {
+        return "question";
     }
 }
